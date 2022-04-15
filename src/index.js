@@ -1,8 +1,7 @@
-// import './style.css'
-// import Experience from './Experience/Experience.js'
+import '../style/common.css'
+import '../style/main.css'
+import Experience from './Experience/Experience.js'
 
-// const experience = new Experience({
-//     targetElement: document.querySelector('.experience')
-// })
-
-console.log(123)
+const experience = new Experience({
+    targetElement: document.querySelector('.experience')
+})
