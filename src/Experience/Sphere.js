@@ -1,6 +1,7 @@
 import * as THREE from 'three'
 import Experience from './Experience.js'
-
+import vertexShader from '../Experience/shaders/vertax.glsl'
+import fragmentShader from '../Experience/shaders/fragnent.glsl'
 export default class Sphere {
 
     constructor() {
@@ -18,7 +19,10 @@ export default class Sphere {
     }
 
     setMaterial() {
-        this.material = new THREE.MeshBasicMaterial({wireframe: true})
+        this.material = new THREE.ShaderMaterial({
+            vertexShader:vertexShader,
+            fragmentShader:fragmentShader
+        })
     }
 
     setMesh() {
